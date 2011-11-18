@@ -1,0 +1,138 @@
+/*----------------------------------------------------------------------------
+    File: downloads.css
+    Description: Styles for the downloads page of Mineshafter Squared
+    
+    Contributors: Ryan Sullivan
+    Company: Kayotic Labs (www.kayoticlabs.com)
+    Webapp: Mineshafter Squared (www.mineshaftersquared.com)
+------------------------------------------------------------------------------
+    Mineshafter Squared is a replacement for the Minecraft Authentication,
+    Skin, and Cape systems.
+    Copyright (C) 2011  Ryan Sullivan
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-----------------------------------------------------------------------------*/
+
+/* For the Box like Modules */
+#blockArea{
+    padding: 0px 20px 0 20px;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+#blockArea .column, #tabs .column{
+    width:290px;
+    float:left;
+    padding:0 10px;
+}
+
+#blockArea .column.first, #tabs .column.first{
+    padding-left:0px;
+}
+
+#blockArea .column.last, #tabs .column.last{
+    padding-right:0px;
+}
+
+#blockArea .block, #tabs .block{
+    background-color:#1B8BB4;
+    padding-bottom:20px;
+}
+
+#blockArea .block h2, #tabs .block h2{
+    height:36px;
+    font-size:20px;
+    font-weight:bold;
+    color:#FFFFFF;
+    padding:11px 0 0 0px;
+}
+
+#blockArea .block .content, #tabs .block .content{
+    background:url(../images/blockcontentbg.png);
+    padding:20px;
+    display:block;
+    overflow:hidden;
+    font-size:14px;
+    clear:both;
+    color:#6A7796;
+}
+
+/* List View */
+.listView .downloads{
+    width:200px !important;
+}
+
+.listView .description{
+    width:524px !important;
+}
+
+.listView .size h2, .listView .link h2{
+    padding:11px 0 0 0 !important;
+    text-align:center;
+}
+
+.listView .description h2{
+    padding:11px 0 0 20px !important;
+    text-align:center;
+}
+
+.listView .size{
+    width:85px !important;
+}
+
+.listView .link{
+    width:85px !important;
+}
+
+.listView .column{
+    padding:0 2px !important;
+}
+
+.downloads .content, .size .content, .link .content{
+    text-align:center;
+}
+
+
+.listView .content.header{
+    font-weight:bold;
+    text-align:center;
+}
+
+.listView .content{
+    background-color:#98AFC7;
+    padding:10px;
+    display:block;
+    overflow:hidden;
+    font-size:14px;
+    clear:both;
+    color:#000000;
+    margin-top:10px;
+}
+
+.listView .block{
+    padding:0 !important;
+}
+
+.listView .row.last{
+    padding-bottom:20px;
+}
+
+.row.highlightDL .content{
+    color:#448245;
+}
+
+.bodyDownloads{
+    width:950px;
+    margin:0 auto;
+}

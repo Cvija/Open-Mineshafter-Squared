@@ -1,0 +1,212 @@
+/*----------------------------------------------------------------------------
+    File: appwide.css
+    Description: Styles for Mineshafter Squared
+    
+    Contributors: Ryan Sullivan
+    Company: Kayotic Labs (www.kayoticlabs.com)
+    Webapp: Mineshafter Squared (www.mineshaftersquared.com)
+------------------------------------------------------------------------------
+    Mineshafter Squared is a replacement for the Minecraft Authentication,
+    Skin, and Cape systems.
+    Copyright (C) 2011  Ryan Sullivan
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-----------------------------------------------------------------------------*/
+
+/**
+ * HTML Reset
+ */
+html{color:#000; background-color:#FBFBFB; height:100%; font-family:sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select{font-size:100%;}
+legend{color:#000;}
+hr{margin:8px 0 1px 0;}
+input[type=button], input[type=submit] {padding:1px 3px;}
+
+p {
+    text-align:left;
+    padding:10px;
+}
+
+/* General Format */
+#AppWrapper{
+    text-align:center;
+    padding-bottom:5px;
+}
+
+#banner{
+    padding:10px 0px;
+    width:558px;
+    margin:0 auto;
+}
+
+#banner #userName{
+    position:absolute;
+    margin-top:3px;
+    font-weight:bold;
+    color:#7E3517;
+    font-size:20px;
+}
+
+
+#siteTop{
+    
+}
+
+#siteMid{
+    margin-top:20px;
+}
+
+#logForm{
+    width:422px;
+    margin:0 auto;
+}
+
+#logForm input[type=text], #logForm input[type=password]{
+    font-size:17px;
+    width:160px;
+}
+
+#logForm #login{
+    padding-bottom:10px;
+}
+
+#logForm #logout{
+    padding-bottom:15px;
+}
+
+#navBar{
+    border-width:0px 0px 1px 0px;
+    border-style:solid;
+    border-color:#BEBEBE;
+    width:100%;
+    padding:6px 0px;
+    background-color:#7E3517;
+}
+
+#navBar .navBarContainer{
+    width:444px;
+    margin:0 auto;
+}
+
+#navBar .navBarContainer.loggedIn{
+    width:555px !important;
+}
+
+#navBar .menuItem, #loginButton{
+    padding:2px;
+    margin:0 5px;
+    border:1px solid #000000;
+    width:95px;
+    cursor:pointer;
+    float:left;
+    background-color:#347235;
+    font-weight:bold;
+}
+
+#navBar .menuItem.selected{
+    background-color:#FBFBFB;
+}
+
+#loginButton{
+    float:right;
+    width:55px;
+}
+
+#navBar .menuItem:hover, #loginButton:hover{
+    background-color:#FBFBFB;
+}
+
+#navBar .navBarContainer a, #navBar .navBarContainer a:hover,
+#navBar .navBarContainer a:active, #navBar .navBarContainer a:after,
+#loginLink, #loginLink:hover, #loginLink:active, #loginLink:after{
+    color:inherit;
+    text-decoration:none;
+}
+
+.noteText{
+    font-size:14px;
+    padding:3px;
+}
+
+.bodyText{
+    width:937px;
+    margin:0px auto;
+}
+
+.clear{
+    clear:both;
+}
+
+/* Section css */
+.section{
+    text-align:left;
+    background-color:#98AFC7;
+    border-width:0px 1px 1px 1px;
+    border-color:#BEBEBE;
+    border-style:solid;
+    margin:0 10px 20px 10px;
+}
+.section.small{
+    width:290px;
+    float:left;
+}
+
+.section h2{
+    font-size:20px;
+    background-color:#1B8BB4;
+    padding:10px 0px 10px 20px;
+    border-width:0 0 1px 0;
+    border-style:solid;
+    border-color:#2B9BC4;
+}
+
+.section .content{
+    padding:5px;
+}
+
+.section.small .content{
+    height:211px;
+}
+
+.dropshadow{
+    z-index:999;
+    -moz-box-shadow: 1px 1px 1px #ccc;
+    -webkit-box-shadow: 0 1px 5px #ccc;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+.bodyWrapper{
+    padding:20px;
+    display:block;
+    font-size:14px;
+    clear:both;
+    width:950px;
+    margin:0 auto;
+}
+
+.hidden{
+    display:none;
+}
