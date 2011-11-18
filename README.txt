@@ -76,7 +76,8 @@ look similar to http://www.mineshaftersquared.com/MSOpen
 	a. Chrome (All Versions)
 	b. Firefox (Version 7 and up)
 	c. Opera (Not Tested, but it should work)
-		- If there are problems contact me. I will fully support this browser, I just have not done extensive testing
+		- If there are problems contact me. I will fully support this browser, I just have not 
+		  done extensive testing
 
 2. Semi-Support
 	a. Internet Explorer (Version 9 and Up)
@@ -92,5 +93,6 @@ look similar to http://www.mineshaftersquared.com/MSOpen
 	c. MineshafterSquared Website: MineshafterSquared.com
 	d. GitHub: https://github.com/KayoticSully/Open-Mineshafter-Squared
 2. Other Stuff
-	I hope you find Open Mineshafter Squared useful and a pleasure to setup and run.  If you have any problems at all
-	please contact me at the above address, or submit an issue on GitHub.
+	I hope you find Open Mineshafter Squared useful and a pleasure to setup and run.  
+	If you have any problems at all please contact me at the above address, or submit 
+	an issue on GitHub.
