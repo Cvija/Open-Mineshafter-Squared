@@ -82,8 +82,8 @@ CREATE TABLE IF NOT EXISTS `Data` (
 INSERT INTO `Data` (`property`, `value`) VALUES
 ('client-version', '2.9'),
 ('server-version', '2.2'),
-('latest-game-version', '1.8.1'),
-('latest-game-build', '1316075312000');
+('latest-game-version', '1.0.0'),
+('latest-game-build', '1321653290000');
 
 -- --------------------------------------------------------
 
