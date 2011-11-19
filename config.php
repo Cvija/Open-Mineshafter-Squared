@@ -35,7 +35,7 @@
 $MySQL = array();
 $MySQL['url']         = "localhost";
 $MySQL['username']    = "USERNAME"; // be secure, please do not use root
-$MySQL['password']    = "PASSWORD";
+$MySQL['password']    = 'PASSWORD';
 $MySQL['database']    = "DATABASENAME";
 
 $MySQL['link']        = mysql_connect($MySQL['url'],
