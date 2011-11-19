@@ -34,9 +34,9 @@
  **/
 $MySQL = array();
 $MySQL['url']         = "localhost";
-$MySQL['username']    = "kayoticl_Shafter"; // be secure, please do not use root
-$MySQL['password']    = "Por2alNewShafter#!)";
-$MySQL['database']    = "kayoticl_MineshafterSquaredBeta";
+$MySQL['username']    = "USERNAME"; // be secure, please do not use root
+$MySQL['password']    = "PASSWORD";
+$MySQL['database']    = "DATABASENAME";
 
 $MySQL['link']        = mysql_connect($MySQL['url'],
                                       $MySQL['username'],
