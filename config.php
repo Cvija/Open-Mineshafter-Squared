@@ -1,4 +1,5 @@
-<!----------------------------------------------------------------------------
+<?php
+/*----------------------------------------------------------------------------
     File: config.php
     Description: The configuration file for Mineshafter Squared
     
@@ -22,8 +23,8 @@
     
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
------------------------------------------------------------------------------->
-<?php
+-----------------------------------------------------------------------------*/
+
 /**
  * MySQL Configuration
  * 
@@ -33,9 +34,9 @@
  **/
 $MySQL = array();
 $MySQL['url']         = "localhost";
-$MySQL['username']    = "MySQLUsername"; // be secure, please do not use root
-$MySQL['password']    = "MySQLPassword"; // please do not use "1234" or "password"
-$MySQL['database']    = "DatabaseName";
+$MySQL['username']    = "kayoticl_Shafter"; // be secure, please do not use root
+$MySQL['password']    = "Por2alNewShafter#!)";
+$MySQL['database']    = "kayoticl_MineshafterSquaredBeta";
 
 $MySQL['link']        = mysql_connect($MySQL['url'],
                                       $MySQL['username'],

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 18, 2011 at 04:06 PM
+-- Generation Time: Nov 18, 2011 at 05:13 PM
 -- Server version: 5.1.59
 -- PHP Version: 5.2.9
 
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `Downloads` (
   `link` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `version` float NOT NULL,
-  `trackName` varchar(255) NOT NULL,
+  `external` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
@@ -107,10 +107,10 @@ CREATE TABLE IF NOT EXISTS `Downloads` (
 -- Dumping data for table `Downloads`
 --
 
-INSERT INTO `Downloads` (`id`, `name`, `description`, `link`, `type`, `version`, `trackName`) VALUES
+INSERT INTO `Downloads` (`id`, `name`, `description`, `link`, `type`, `version`, `external`) VALUES
 (7, 'Windows Launcher', 'The Windows proxy client.', 'downloads/MineshafterSquared-Client.exe', 'client', 2.9, ''),
 (2, 'Server Proxy', 'The program that makes a Minecraft Server to use this Authentication Server ', 'downloads/MineshafterSquared-Server.jar', 'main', 2.2, ''),
-(3, 'Authentication Server', 'PHP and MySQL based Minecraft Authentication Server', 'downloads/MineshafterSquared-Authentication-Server.zip', 'main', 1.3, ''),
+(3, 'Authentication Server', 'PHP and MySQL based Minecraft Authentication Server', 'https://github.com/KayoticSully/Open-Mineshafter-Squared/zipball/master', 'main', 2, 'GitHub*'),
 (4, 'Source Code', 'Because this is open source', 'downloads/Source.zip', 'main', 1.2, ''),
 (5, 'Mac OSX Launcher', 'The Mac OS X proxy client', 'downloads/MineshafterSquared-Client.dmg', 'client', 2.9, ''),
 (6, 'Client Proxy Jar', 'The Mineshafter Squared Java app. (Not needed if you are using a launcher)', 'downloads/MineshafterSquared-Client.jar', 'client', 2.9, '');

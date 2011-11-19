@@ -165,6 +165,7 @@
                         <div class="size column">
                             <div class="content">
                                 <?php
+                                if(trim($value['external']) == ''){
                                     $size = filesize($value['link'])/1024;
                                     $unit = "KB";
                                     if($size > 100){
@@ -172,6 +173,9 @@
                                         $unit = "MB";
                                     }
                                     echo number_format($size, 2).' '.$unit;
+                                } else {
+                                    echo $value['external'];
+                                }
                                 ?>
                             </div>
                         </div>
@@ -193,6 +197,9 @@
                 }
                 ?>
         </div>
+    </div>
+    <div class="smallText">
+        * This file is hosted on <a href="https://github.com/KayoticSully/Open-Mineshafter-Squared">GitHub</a> so the file size is unknown.
     </div>
     <?php
     buildFoot();
