@@ -661,4 +661,61 @@ function setActiveCape($capeId){
 	}
     }
 }
+
+/**
+ * getVersion(string $type) - gets the latest version number of either the server or client.
+ * $type - can be either 'server' or 'client'
+ * 
+ * Returns: the latest version number of the specified type
+ **/
+function getVersion($type){
+    global $config;
+    $query = '
+        Select	value
+        From	`'.$MySQL['database'].'`.`Data`
+        Where	property = "'.mysql_real_escape_string($type).'-version"
+    ';
+
+    $record = mysql_fetch_assoc(runQuery($query));
+    return $record['value'];
+}
+
+/**
+ * checkForGameUpdate(string $currentBuild) - checks to see if there is a newer version of Minecraft.
+ * $currentBuild - the clients current version number
+ * 
+ * Returns: a string with 'true:' or 'false:' followed by the latest game version number
+ **/
+function checkForGameUpdate($currentBuild){
+    global $config;
+    
+    $query = '
+        Select	property, value
+        From	`'.$MySQL['database'].'`.`Data`
+        Where	property = "latest-game-build"
+	OR	property = "latest-game-version"
+    ';
+    
+    $resource = runQuery($query);
+    $needsUpdate = false;
+    $latestVersion = 0;
+    while($record = mysql_fetch_assoc($resource)){
+	switch($record['property']){
+	    case 'latest-game-build':
+		if((int)$record['value'] > (int)$currentBuild){
+		    $needsUpdate = true;
+		}
+	    break;
+	    
+	    case 'latest-game-version':
+		$latestVersion = $record['value'];
+	}
+    }
+    
+    if($needsUpdate){
+	return ":true:".$latestVersion;
+    }
+    
+    return ":false:".$latestVersion;
+}
 ?>
