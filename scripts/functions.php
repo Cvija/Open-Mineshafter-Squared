@@ -414,7 +414,7 @@ function deleteCape($capeId){
     global $config;
     
     
-    $activeSkin = getActiveCape();
+    $activeCape = getActiveCape();
     
     if($activeCape['id'] == $capeId){
 	resetUserCape();
