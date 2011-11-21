@@ -718,4 +718,31 @@ function checkForGameUpdate($currentBuild){
     
     return ":false:".$latestVersion;
 }
+
+
+/**
+ * generateSessionId() - generates a unique sessionId
+ * 
+ * Returns: the sessionId
+ **/
+function generateSessionId(){
+    global $config;
+    // generate rand num
+    srand(time());
+    $randNum = rand(1000000000, 2147483647).rand(1000000000, 2147483647).rand(0,9);
+    
+    /* Check to see if it is un use */
+    $query = '
+        Select  session
+        From    `'.$MySQL['database'].'`.`Users`
+        Where   session = '.$randNum.'
+    ';
+    
+    $resource = runQuery($query);
+    if(mysql_num_rows($resource) == 0){
+        return $randNum;
+    } else {
+        return generateSessionId();
+    }
+}
 ?>
