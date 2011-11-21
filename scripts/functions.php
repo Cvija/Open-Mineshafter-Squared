@@ -745,4 +745,80 @@ function generateSessionId(){
         return generateSessionId();
     }
 }
+
+/**
+ * getGameInfo() - returns the type of information asked for
+ * $type - can be 'version' 'build' 'client' 'server'
+ * 
+ * Returns: the information asked for
+ **/
+function getGameInfo($type){
+    global $config;
+    
+    switch($type){
+	case 'version':
+	    $query='
+		Select  property, value
+		From    `'.$MySQL['database'].'`.`Data`
+		Where   property = "latest-game-version";
+	    ';
+	    $resource = mysql_fetch_assoc(runQuery($query));
+	    return $resource['value'];
+	break;
+	
+	case 'build':
+	    $query='
+		Select  property, value
+		From    `'.$MySQL['database'].'`.`Data`
+		Where   property = "latest-game-build";
+	    ';
+	    $resource = mysql_fetch_assoc(runQuery($query));
+	    return $resource['value'];
+	break;
+    
+        case 'client':
+	    $query='
+		Select  property, value
+		From    `'.$MySQL['database'].'`.`Data`
+		Where   property = "client-version";
+	    ';
+	    $resource = mysql_fetch_assoc(runQuery($query));
+	    return $resource['value'];
+	break;
+    
+        case 'server':
+	    $query='
+		Select  property, value
+		From    `'.$MySQL['database'].'`.`Data`
+		Where   property = "server-version";
+	    ';
+	    $resource = mysql_fetch_assoc(runQuery($query));
+	    return $resource['value'];
+	break;
+	
+	default:
+	    $query='
+		Select  property, value
+		From    `'.$MySQL['database'].'`.`Data`
+		Where   property = "latest-game-build"
+		Or      property = "latest-game-version";
+	    ';
+	    $resource = runQuery($query);
+	    $return = array();
+	    while($record = mysql_fetch_assoc($resource)){
+		switch($record['property']){
+		    case 'latest-game-build':
+			$return['build'] = $record['value'];
+		    break;
+		    
+		    case 'latest-game-version':
+			$return['version'] = $record['value'];
+		    break;
+		}
+	    }
+	    
+	    return $return['build'].':'.$return['version'];
+	break;
+    }
+}
 ?>
