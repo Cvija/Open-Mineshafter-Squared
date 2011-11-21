@@ -669,7 +669,7 @@ function setActiveCape($capeId){
  * Returns: the latest version number of the specified type
  **/
 function getVersion($type){
-    global $config;
+    global $MySQL;
     $query = '
         Select	value
         From	`'.$MySQL['database'].'`.`Data`
@@ -687,7 +687,7 @@ function getVersion($type){
  * Returns: a string with 'true:' or 'false:' followed by the latest game version number
  **/
 function checkForGameUpdate($currentBuild){
-    global $config;
+    global $MySQL;
     
     $query = '
         Select	property, value
@@ -726,7 +726,7 @@ function checkForGameUpdate($currentBuild){
  * Returns: the sessionId
  **/
 function generateSessionId(){
-    global $config;
+    global $MySQL;
     // generate rand num
     srand(time());
     $randNum = rand(1000000000, 2147483647).rand(1000000000, 2147483647).rand(0,9);
@@ -753,7 +753,7 @@ function generateSessionId(){
  * Returns: the information asked for
  **/
 function getGameInfo($type){
-    global $config;
+    global $MySQL;
     
     switch($type){
 	case 'version':
