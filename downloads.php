@@ -26,7 +26,7 @@
 <?php
     require_once 'scripts/session.php';
     require_once 'scripts/siteBuilder.php';
-    require_once "Browser.php";
+    require_once "scripts/Browser.php";
     $Browser = new Browser();
     
     buildHead('Downloads', array('downloads.css'));
