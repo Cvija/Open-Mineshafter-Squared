@@ -41,6 +41,6 @@ $resource = runQuery($query);
 if(mysql_num_rows($resource) == 1){
 	echo "YES";
 } else{
-	echo $responseFromMinecraft = do_post_request('http://www.minecraft.net/game/checkserver.jsp?user='.$_GET['user'].'&serverId='.$_GET['serverId'], '');
+	echo do_post_request('http://www.minecraft.net/game/checkserver.jsp?user='.$_GET['user'].'&serverId='.$_GET['serverId'], '');
 }
 ?>
