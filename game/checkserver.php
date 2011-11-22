@@ -31,7 +31,7 @@ require_once '../scripts/functions.php';
 
 $query='
       Select 	username
-      From	`'.$config['mysql']['database'].'`.`Users`
+      From	`'.$MySQL['database'].'`.`Users`
       Where     server = "'.mysql_real_escape_string($_GET['serverId']).'"
       And	username = "'.mysql_real_escape_string($_GET['user']).'"
     ';
