@@ -118,7 +118,7 @@
                             ?>
                             <div class="item <?= $classExtra?>">
                                 <div class="subItem">
-                                    <img src="<?= $config['capesLocation'].$cape['link']?>" alt="<?=$skin['description']?>" class="subItem" />
+                                    <img src="<?= $config['capesLocation'].$cape['link']?>" alt="<?=$cape['description']?>" class="subItem" />
                                     <div class="subItem text">
                                         <a href="javascript:setActive(<?= $cape['id'] ?>);" ><?= $name ?></a>
                                     </div>
