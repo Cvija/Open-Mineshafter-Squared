@@ -51,7 +51,7 @@ if(mysql_num_rows($resource) == 1){
         
     $resource = runQuery($query);
     
-    if(mysql_affected_rows($config['mysql']['link']) == 1){
+    if(mysql_affected_rows($MySQL['link']) == 1){
         echo "OK";
     } else {
         echo "Bad login";
