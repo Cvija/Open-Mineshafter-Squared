@@ -612,8 +612,8 @@ function setActiveSkin($skinId){
     if($skinId != null){
 	$query='
 	    Update  `'.$MySQL['database'].'`.`ActiveSkin`
-	    Set     userId = "'.mysql_real_escape_string($_SESSION['userId']).'",
-		    skinId = "'.mysql_real_escape_string($skinId).'";
+	    Set	      skinId = "'.mysql_real_escape_string($skinId).'"
+	    Where     userId = "'.mysql_real_escape_string($_SESSION['userId']).'";
 	';
 	runQuery($query);
 	
@@ -643,8 +643,8 @@ function setActiveCape($capeId){
     if($capeId != null){
 	$query='
 	    Update  `'.$MySQL['database'].'`.`ActiveCape`
-	    Set     userId = "'.$_SESSION['userId'].'",
-		    capeId = "'.mysql_real_escape_string($capeId).'";
+	    Set	    capeId = "'.mysql_real_escape_string($capeId).'"
+	    Where     userId = "'.$_SESSION['userId'].'";
 	';
 	runQuery($query);
 	
