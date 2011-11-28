@@ -30,7 +30,7 @@
     
     /* Query to select skin links for this particular player */
     $query = '
-        Select  link, public
+        Select  link
         From    `'.$MySQL['database'].'`.`ActiveCape` AS ActiveCape
                 Left Join (`'.$MySQL['database'].'`.`Users` AS Users, `'.$MySQL['database'].'`.`Capes` AS Capes)
                 On (ActiveCape.userId = Users.id AND ActiveCape.capeId = Capes.id)
