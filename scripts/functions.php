@@ -821,4 +821,33 @@ function getGameInfo($type){
 	break;
     }
 }
+
+
+/**
+ * do_post_request(string $url, string $data) - returns the type of information asked for
+ * $url - url to send data to
+ * $data - post data to send to url
+ * 
+ * Returns: what the url returns
+ **/
+function do_post_request($url, $data)
+{
+    $params = array('http' => array(
+                    'method' => 'POST',
+                    'content' => $data
+                  ));
+  
+    $ctx = stream_context_create($params);
+    $fp = @fopen($url, 'rb', false, $ctx);
+    if (!$fp) {
+        throw new Exception("Problem with $url, $php_errormsg");
+    }
+    $response = @stream_get_contents($fp);
+    if ($response === false) {
+        throw new Exception("Problem reading data from $url, $php_errormsg");
+    }
+    
+    return $response;
+}
+
 ?>
